@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
+
 
 <style>
     body{
@@ -470,78 +472,17 @@ height: 150px;
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* lalit */
-
 .cont1{
     height: 50vh;
     width: 99vw;
-    border:2px solid black;
+    /* border:2px solid black; */
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
     height: 80vh;
     align-items: center;
     justify-content:flex-start;
-    
+    padding: 50px;
     img{
         height: 50vh;
         width: 99vw;
@@ -561,7 +502,7 @@ height: 150px;
         width: 15vw;
         
 
-        h1{ color: white;
+        /* h1{ color: white;
             padding: 7px;
                 text-align: center;
             }
@@ -572,12 +513,13 @@ height: 150px;
             p{ color: white;
                 text-align: center;
                 padding: 7px;
+            } */
+            img{
+                height: 27vh;
+                width: 15vw;
+                object-fit: fill;
             }
             transition-duration: 0.8s;
-
-
- 
-        
     }
 
   
@@ -595,7 +537,7 @@ border-radius: 12px;
 .cont2{
     height: 50vh;
     width: 99vw;
-    border:2px solid black;
+    /* border:2px solid black; */
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
@@ -646,14 +588,6 @@ border-radius: 12px;
 .cont2 .items:hover {
     transform: translateY(-20px); /* Moves the box 10px upward */
   }
-
-
-
-
-
-
-
-
 
   
 .cont4{
@@ -713,7 +647,6 @@ opacity: 0;
 }
 
 
-
 .item .content{
 
 position: absolute;
@@ -734,8 +667,8 @@ display: block;
 
 
 .content .name{
-color:white;
-font-size: 40px;
+color:black;
+font-size: 30px;
 text-transform: uppercase;
 font-weight: bold;
 opacity: 1;
@@ -774,8 +707,6 @@ to{
 }
 }
 
-
-
 .button{
 width: 100%;
 text-align: center;
@@ -798,105 +729,6 @@ transition: 0.3s;
 background: #ababab;
 color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 550px) {
 .heading ul li {
@@ -926,14 +758,99 @@ display: flex;
 flex-wrap: nowrap;
 }
 }
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+}
+.search-input {
+    width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Green glow */
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    outline: none;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+.search-button:active {
+    transform: scale(0.95); 
+}
+
+.content{
+    padding: 100px;
+    margin: 50px;
+    color: white;
+    font-family: cursive;
+    font-size: 30px;
+    
+
+    h1{ padding: 30px;
+        color: white;
+    }
+    li{ 
+        padding: 10px;
+        color: white;
+    }
+}
+.diff_forms{
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    h1{
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        
+    }
+}
 
 </style>
+
+
+
+
+<!--   CSS above  -->
 <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'products/css/styles.css' %}">
+{% load static %}
+<script src="{% static 'products/js/ecommerce_website.js' %}"></script>
+
+
+<img src="{% static 'products/images/image_name.jpg' %}" alt="">
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- <script src="ecommercewebsite.js"></script> -->
+
 </head>
 
 <body>
 <header>
-<div class="logo"><a href="#">LaptopLoom</a></div>
+<div class="logo"><a href="#">Laptop Website</a></div>
 <div class="menu">
 <a href="#">
 <ion-icon name="close" class="close"></ion-icon>
@@ -947,17 +864,17 @@ flex-wrap: nowrap;
 <li><a href="#" class="under">ABOUT US</a></li>
 </ul>
 </div>
-<div class="search">
 
-<a href=""><input type="text" placeholder="search products" id="input">
-<ion-icon class="s" name="search"></ion-icon>
-</a>
-</div>
+
+<form method="GET" action="{% url 'search_laptops_by_model' %}">
+    <input type="text" name="model_name" placeholder="Enter model name" value="{{ query }}" required class="search-input">
+    <button type="submit" class="search-button">Search</button>
+</form>
 <div class="heading">
 <ul>
 <li><a href="#" class="under">HOME</a></li>
 <li><a href="#section2" class="under">SHOP</a></li>
-<li><a href="#section2 class="under">OUR PRODUCTS</a></li>
+<li><a href="#section2" class="under" >PRODUCTS</a></li>
 <li><a href="#footer" class="under">CONTACT US</a></li>
 <li><a href="#footer" class="under">ABOUT US</a></li>
 </ul>
@@ -970,188 +887,104 @@ flex-wrap: nowrap;
 <div class="section">
 <div class="section1">
 <div class="img-slider">
-<img src="https://img.freepik.com/premium-photo/businessman-working-with-laptop-computer-late-night_35674-8281.jpg?w=996" alt="" class="img">
-<img src="https://img.freepik.com/free-photo/businesswoman-holding-cup-coffee-analyzing-financial-graphs-typing-marketing-strategy-while-working-company-project-startup-office-executive-manager-researching-business-solution_482257-34880.jpg?t=st=1726754287~exp=1726757887~hmac=753dc74581f6e451e8aae643313162090f2573f1d5cded3edf31ffe872d52363&w=996" alt="" class="img">
-<img src="https://img.freepik.com/free-photo/view-office-desk-with-messy-workspace-laptop_23-2150282087.jpg?t=st=1726754324~exp=1726757924~hmac=c53615a08c97c25a5a5d4d0cb6512ca797cf0742aa0b26dc384d2df66e2a36fe&w=996" alt="" class="img">
-<img src="https://img.freepik.com/free-photo/young-businesswoman-drinking-coffee-with-her-eyes-closed-while-taking-break-from-work-office_637285-5178.jpg?uid=R164202707&ga=GA1.1.403187138.1726754182" alt="" class="img">
-<img src="https://img.freepik.com/free-photo/online-trends_53876-167072.jpg?uid=R164202707&ga=GA1.1.403187138.1726754182" alt="" class="img">
+<img src="https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="img">
+<img src="https://images.pexels.com/photos/1375883/pexels-photo-1375883.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="img">
+<img src="https://images.pexels.com/photos/14694715/pexels-photo-14694715.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="img">
+<img src="https://images.pexels.com/photos/20035528/pexels-photo-20035528/free-photo-of-a-woman-sitting-on-a-rock-by-a-lake.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="img">
+<img src="https://images.pexels.com/photos/20035472/pexels-photo-20035472/free-photo-of-woman-exercising-yoga-on-mat.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" class="img">
+</div>
 </div>
 
+
+<div class="content" >
+  <h1> How to Do Yoga for Physical and Mental Well-Being</h1> 
+   <p>We live in a fast-paced and digitized world. The pressure to succeed, meet deadlines, deliver high-quality work, and maintain erratic schedules has taken a toll on our physical and mental well-being. In light of this, it has become essential to create balance, develop awareness, and follow healthy habits. One effective way to achieve this is by incorporating yoga into your life. Unlike the common misconception, yoga is not a religion but a way of life. It encompasses not just postures and asanas, but also pranayamas, kriyas, meditation (dhyana), breath work, mindful living, and a healthy diet. Therefore, the advantages of yoga are manifold, extending beyond just physical improvements.</p> 
+
+   <ol>
+    <h1>Physical Health Benefits:</h1> 
+
+   <li> Improved Flexibility and Balance: Yoga asanas move the body in different directions, enhancing flexibility and balance.</li>
+    
+   <li> Strengthens Muscles: Regular practice builds core and muscle strength, increasing endurance.</li>
+    
+   <li> Better Heart and Lung Function: Yoga improves heart health, oxygenation, and reduces the risk of cardiovascular diseases.</li>
+   </ol>
+   <ol>
+    <h1>Mental Health Benefits:</h1>
+
+      <li> Reduces Stress: Yoga reduces cortisol levels and increases serotonin, promoting relaxation.</li>
+        
+      <li> Improves Sleep Quality: Yoga aids in the release of melatonin, helping in falling asleep and getting quality sleep.</li>
+        
+      <li> Increases Focus and Awareness: Yoga enhances concentration and mindfulness, boosting productivity.</li>
+   </ol>
+</div>
+
+
+   
+<div class="diff_forms">
+    <h1> Different forms of Yoga.</h1>
 </div>
 <div id="section2" class="section2">
-<div class="container">
-<div class="items">
-<div class="img img1"><img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688127794/Croma%20Assets/CMS/PCP/June%20-2023/30-06-2023/Laptop%20PCP/Desktop/Your%20laptop%20Your%20use/PCP_4split_LP_NC_Uses_Gaming_16May2023_albe3u.png?tr=w-720" alt=""></div>
-<!-- <div class="name">SHOES</div>
-<div class="price">$5</div>
-<div class="info">Lorem ipsum dolor sit amet consectetur.</div> -->
+    <div class="container">
+        
+        <!-- Gaming Laptops -->
+        <div class="items">
+            
+            <a href="{% url 'gaming_laptops' %}">
+                <div class="img img1">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.VISNqLqyhOM7zAzoIxOZUAHaFH&pid=Api&P=0&h=180" alt="Gaming Laptops">
+                </div>
+                
+
+            </a>
+        </div>
+
+        <!-- Office Laptops -->
+        <div class="items">
+            <a href="{% url 'office_laptops' %}">
+                <div class="img img1">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.brnLAGaSqXfviIyzHBBp6gHaFH&pid=Api&P=0&h=180" alt="Office Laptops">
+                </div>
+            </a>
+        </div>
+
+        <!-- Study Laptops -->
+        <div class="items">
+            <a href="{% url 'study_laptops' %}">
+                <div class="img img1">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.JLQcCFyn4qKtRTkHVrTzEgHaEK&pid=Api&P=0&h=180" alt="Study Laptops">
+                </div>
+            </a>
+        </div>
+
+    </div>
 </div>
-<div class="items">
-<div class="img img2"><img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688127794/Croma%20Assets/CMS/PCP/June%20-2023/30-06-2023/Laptop%20PCP/Desktop/Your%20laptop%20Your%20use/PCP_4split_LP_NC_Uses_Entertainment_16May2023_nxyxlu.png?tr=w-720" alt=""></div>
-<!-- <div class="name">MEN's T-SHIRT</div>
-<div class="price">$6.34</div>
-<div class="info">Lorem ipsum dolor sit.</div> -->
-</div>
-<div class="items">
-<div class="img img3"><img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688127794/Croma%20Assets/CMS/PCP/June%20-2023/30-06-2023/Laptop%20PCP/Desktop/Your%20laptop%20Your%20use/PCP_4split_LP_NC_Uses_CC_16May2023_gwlxlt.png?tr=w-720" alt=""></div>
-<!-- <div class="name">JEANS</div>
-<div class="price">$9</div>
-<div class="info">Lorem ipsum dolor sit amet.</div> -->
-</div>
-<div class="items">
-<div class="img img1"><img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1698229079/Croma%20Assets/CMS/PCP/Oct-2023/25-10-2023/Laptop%20PCP%20Your%20Laptop%2C%20Your%20Use/Desktop/pcp_laptops_EverydayUse_25Oct2023_fs1cn1.png?tr=w-720" alt=""></div>
-<!-- <div class="name">WATCH</div>
-<div class="price">$9.1</div>
-<div class="info">Lorem ipsum dolor sit.</div> -->
-</div>
-<div class="items">
-<div class="img img1"><img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688127795/Croma%20Assets/CMS/PCP/June%20-2023/30-06-2023/Laptop%20PCP/Desktop/Your%20laptop%20Your%20use/pcp_laptops_OfficeUse_16May2023_a9fklu.png?tr=w-720" alt=""></div>
-<!-- <div class="name">SMART PHONE</div>
-<div class="price">$20</div>
-<div class="info">Lorem ipsum dolor sit.</div> -->
-</div>
-<div class="items">
-<div class="img img1"><img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1698229080/Croma%20Assets/CMS/PCP/Oct-2023/25-10-2023/Laptop%20PCP%20Your%20Laptop%2C%20Your%20Use/Desktop/pcp_laptops_Studies_25Oct2023_qa7x0a.png?tr=w-720" alt=""></div>
-<!-- <div class="name">TELEVISION</div>
-<div class="price">$18</div>
-<div class="info">Lorem ipsum dolor sit amet consectetur.</div> -->
-</div>
-
-</div>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-<!-- lalit -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="cont1">
-    <img src="https://www.intel.com/content/dam/www/central-libraries/us/en/images/2022-08/rpl-2022-dotcom-2col-nextlevel.png" alt="">
+    <img src="https://yogguru.in/wp-content/uploads/2020/07/banner1.jpg" alt="">
     <div class="items  items1 ">
-        <h1>i3</h1>
-        <h3>Processor</h3>
-        <p>Ideal forcasual use</p>
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGF0aGElMjB5b2dhfGVufDB8fDB8fHww" alt="">
     </div>
     <div class="items  items2">
-        
-        <h1>i5</h1>
-        <h3>Processor</h3>
-        <p>Ideal for professional use</p>
+        <img src="https://plus.unsplash.com/premium_photo-1677360384445-055f9ed150fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjV8fGhhdGhhJTIweW9nYXxlbnwwfHwwfHx8MA%3D%3D" alt="">
     </div>
     <div class="items  items3">
-        
-        <h1>i7</h1>
-        <h3>Processor</h3>
-        <p>Ideal for business use</p>
+        <img src="https://images.unsplash.com/photo-1615657973599-990d6e05fb8a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ0fHxoYXRoYSUyMHlvZ2F8ZW58MHx8MHx8fDA%3D" alt="">
     </div>
     <div class="items  items4">
-        
-        <h1>i9</h1>
-        <h3>Processor</h3>
-        <p>Ideal for Pros</p>
+        <img src="https://images.unsplash.com/photo-1519502527066-26f4a82c57bb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjc2fHxoYXRoYSUyMHlvZ2F8ZW58MHx8MHx8fDA%3D" alt="">
         
     </div>
     <div class="items  items5">
-        
-        <h1>Core Ultra</h1>
-        <h3>Processor</h3>
-        <p>Recommended AI powered</p>
-        
-    </div>
-
-    
+       <img src="https://plus.unsplash.com/premium_photo-1716392168221-0ffda7183c37?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjkzfHxoYXRoYSUyMHlvZ2F8ZW58MHx8MHx8fDA%3D" alt="">
+    </div>    
 </div>
 
 
-
-
-
-<div class="cont2">
-    <img src="https://www.91-cdn.com/hub/wp-content/uploads/2022/08/AMDR-2.jpg" alt="">
+<!-- <div class="cont2">
+    <img src="https://yogatrainingguide.com/wp-content/uploads/2012/06/vinyasa-yoga.png" alt="">
     <div class="items  items1 ">
         <h1>R3</h1>
         <h3>Processor</h3>
@@ -1176,7 +1009,7 @@ flex-wrap: nowrap;
         <p>Ideal for Gamers</p>
 
     </div>
-</div>
+</div> -->
 
 
 
@@ -1189,47 +1022,39 @@ flex-wrap: nowrap;
 <div class="container">
 
     <div class="slide">
-        <div class="item" style="background-image: url(https://wallpaperaccess.com/full/4057042.jpg); ">
+        <div class="item" style="background-image: url(https://yogawaken.com/wp-content/uploads/2024/04/yoga-23.webp); ">
             <div class="content">
-                <div class="name">DELL</div>
-                <div class="des">Ratchadaphisek Rd., Din Daeng, Bangkok 10400, Thailand Located in the bustling Ratchada area</div>
-                <button>See More</button>
+                <div class="name">ARDHA CHANDRASANA</div>
+             
             </div>
         </div>
-        <div class="item" style="background-image: url(https://wallpapercave.com/wp/wp5400924.jpg);">
+        <div class="item" style="background-image: url(https://yogawaken.com/wp-content/uploads/2024/04/poses.webp);">
             <div class="content">
-                <div class="name">ASUS GAMING </div>
-                <div class="des">Nakae Bldg.1F, 3-9-8, Sotokanda, Chiyoda Ku, Tokyo To, 101-0021, Japan.</div>
-                <button>See More</button>
+                <div class="name">ARDHA MATSYENDRASANA</div>
+               
             </div>
         </div>
-        <div class="item" style="background-image: url(https://wallpaperaccess.com/full/8199311.jpg);">
+        <div class="item" style="background-image: url(https://yogawaken.com/wp-content/uploads/2024/04/cobra.webp);">
             <div class="content">
-                <div class="name">LENOVO LEGION</div>
-                <div class="des">Samex computers,Brooklyn, NY 11235, 305 Brighton Beach Ave
-                    Area Brooklyn</div>
-                <button>See More</button>
+                <div class="name">BHUNJANGASANA</div>
+               
             </div>
         </div>
-        <div class="item" style="background-image: url(http://wallpapercave.com/wp/wc1735690.jpg);">
+        <div class="item" style="background-image: url(https://yogawaken.com/wp-content/uploads/2024/04/bow.webp);">
             <div class="content">
-                <div class="name">HP</div>
-                <div class="des">HP world,	No 7, Gr Flr, Krish Tower, Omkar Nagar, Arekere Gate,Bannerghatta,Bengaluru - 560079</div>
-                <button>See More</button>
+                <div class="name">DHANURASANA</div>
+              
             </div>
         </div>
-        <div class="item" style="background-image: url(https://e0.pxfuel.com/wallpapers/239/996/desktop-wallpaper-40-best-finest-apple-for-and-for-your-mobile-tablet-explore-apple-laptop-mac-computer-apple-apple-background-macbook.jpg);">
+        <div class="item" style="background-image: url(https://yogawaken.com/wp-content/uploads/2024/04/eagle-1536x1536.webp);">
             <div class="content">
-                <div class="name">APPLE</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
+                <div class="name">GARUDASANA</div>
+                
             </div>
         </div>
-        <div class="item" style="background-image: url(https://wallpapercave.com/wp/C8dzY9z.jpg);">
+        <div class="item" style="background-image: url(https://yogawaken.com/wp-content/uploads/2024/04/lord-1536x1536.webp);">
             <div class="content">
-                <div class="name">ACER</div>
-                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                <button>See More</button>
+                <div class="name">NATRAJASANA</div>
             </div>
         </div>
 
@@ -1247,104 +1072,9 @@ flex-wrap: nowrap;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer>
 <div id="footer" class="footer0">
-<h1>WELCOME TO LAPTOPLOOM</h1>
+<h1>WELCOME TO Laptop Website</h1>
 </div>
 <div class="footer1 ">
 Connect with us at<div class="social-media">
@@ -1363,38 +1093,6 @@ Connect with us at<div class="social-media">
 <a href="#">
 <ion-icon name="logo-twitter"></ion-icon>
 </a>
-</div>
-</div>
-<div class="footer2">
-<div class="product">
-<div class="heading">Products</div>
-<div class="div">Sell your Products</div>
-<div class="div">Advertise</div>
-<div class="div">Pricing</div>
-<div class="div">Product Buisness</div>
-
-</div>
-<div class="services">
-<div class="heading">Services</div>
-<div class="div">Return</div>
-<div class="div">Cash Back</div>
-<div class="div">Affiliate Marketing</div>
-<div class="div">Others</div>
-</div>
-<div class="Company">
-<div class="heading">Company</div>
-<div class="div">Complaint</div>
-<div class="div">Careers</div>
-<div class="div">Affiliate Marketing</div>
-<div class="div">Support</div>
-</div>
-<div class="Get Help">
-<div class="heading">Get Help</div>
-<div class="div">Help Center</div>
-<div class="div">Privacy Policy</div>
-<div class="div">Terms</div>
-<div class="div">Login</div>
-</div>
 </div>
 <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
 </footer>
